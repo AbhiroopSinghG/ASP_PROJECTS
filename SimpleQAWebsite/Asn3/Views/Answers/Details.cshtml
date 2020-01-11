@@ -1,0 +1,42 @@
+﻿@model Asn3.Models.Answer
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Answer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.QuestionId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuestionId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AnswerText)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnswerText)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AnswerDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnswerDateTime)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.AnswerId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

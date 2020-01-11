@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Asn3.Models.Question>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Top Questions</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Qname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Qdatetime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Catobjref)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Qname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Qdatetime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Catobjref)
+            </td>
+            
+        </tr>
+    }
+
+</table>
